@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.ico">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">POMODORO TIMER</h1>
+    <div id="motivational-quote" class="quote">"Loading motivation..."</div>
+    <div class="timer-container">
+      <svg width="220" height="220" viewBox="0 0 100 100">
+        <circle class="bg-circle" cx="50" cy="50" r="45"></circle>
+        <circle class="progress-circle" cx="50" cy="50" r="45"></circle>
+      </svg>
+      <div id="timer" class="timer-text">25:00</div>
+    </div>
+    <div class="buttons">
+      <button id="start">▶</button>
+      <button id="pause">⏸</button>
+      <button id="reset">🔄</button>
+      <button id="music1" onclick="playMusic('music1')">🎶</button>
+      <button id="music2" onclick="playMusic('music2')">🎧</button>
+      <button id="music3" onclick="playMusic('music3')">🎼</button>
+      <button id="music4" onclick="playMusic('music4')">🎵</button>
+      <button id="music5" onclick="playMusic('music5')">🎷</button>
+      <button id="stop" onclick="stopMusic()">⏹</button> <!-- Stop Button -->
+    </div>
+    <div class="session-info">
+      <p>🔥 <span id="sessionCount">0</span> | Streak: <span id="streakCount">0</span></p>
+    </div>
+    <div class="footer">
+      <a href="tips.html">Productivity Tips</a> | 
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+
+  <div id="clock" class="clock"></div>  
+
+  
+  <audio id="musicPlayer" preload="auto">
+    <source id="musicSource" type="audio/mp3">
+  </audio>
+
+  <script src="script.js"></script>
+  <script src="api.js"></script>
+  <script src="blockchain.js"></script>
+</body>
+</html>

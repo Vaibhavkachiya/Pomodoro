@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@500&family=Open+Sans:wght@400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  background: linear-gradient(to right, #ffffff, #00b8f4);
+  color: #1e1e1e;
+  transition: background 0.5s ease-in-out;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 80%;
+  max-width: 750px;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 25px;
+  box-shadow: 0 0 50px #00b8f4;
+  animation: fadeIn 1s ease-in-out;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #00b8f4;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.quote {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 25px;
+  transition: opacity 0.5s;
+}
+
+.timer-container {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: auto;
+  transition: transform 0.3s;
+}
+
+.timer-container:hover {
+  transform: scale(1.05);
+}
+
+.bg-circle {
+  fill: none;
+  stroke: #111;
+  stroke-width: 6;
+}
+
+.progress-circle {
+  fill: none;
+  stroke: #00b8f4;
+  stroke-width: 6;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  transition: stroke-dashoffset 1s linear;
+}
+
+.timer-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #00b8f4;
+}
+
+.buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+button {
+  padding: 16px 22px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 24px;
+  font-family: 'Open Sans', sans-serif;
+  transition: 0.3s;
+  background: #00b8f4;
+  color: black;
+  border: none;
+  box-shadow: 0 0 10px #00b8f4;
+}
+
+button:active {
+  transform: scale(0.9);
+  box-shadow: 0 0 20px #00b8f4;
+}
+
+button:hover {
+  transform: scale(1.15);
+}
+
+.session-info {
+  margin-top: 25px;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.footer {
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer a {
+  color: #00b8f4;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.tips-container,
+.privacy-container {
+  width: 80%;
+  max-width: 700px;
+  margin: auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00b8f4;
+  color: #1e1e1e;
+  text-align: left;
+  margin-top: 50px;
+}
+
+.tips-container h1,
+.privacy-container h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00b8f4;
+}
+
+.tips-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tips-container li,
+.privacy-container p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+button {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #00b8f4;
+  color: black;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* Updated Clock position in the top-right corner */
+.clock {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: #333;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
